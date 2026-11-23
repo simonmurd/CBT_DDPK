@@ -164,18 +164,18 @@ export const LoginView: React.FC<LoginViewProps> = ({
       )}
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-start">
-        {/* Left column: Exam briefing & instructions */}
+        {/* Left column: Exam briefing & Kisi-Kisi instructions */}
         <section className="space-y-6 lg:col-span-5">
           <div className="space-y-3">
             <p className="text-xs font-medium text-sky-700">
-              Computer-Based Test · Kelas {EXAM_CONFIG.gradeLevel}
+              Asesmen DDPK TJKT · Kelas {EXAM_CONFIG.gradeLevel}
             </p>
             <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl text-balance">
-              {EXAM_CONFIG.subjectName}
+              {EXAM_CONFIG.mainTopic}
             </h1>
             <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
-              Verifikasi identitas peserta secara berjenjang dan masukkan token ujian aktif
-              untuk mengakses ruang evaluasi berbasis komputer.
+              {EXAM_CONFIG.subjectName}. Verifikasi identitas peserta dan masukkan token ujian aktif
+              untuk memulai asesmen.
             </p>
           </div>
 
@@ -205,37 +205,56 @@ export const LoginView: React.FC<LoginViewProps> = ({
             </div>
           </div>
 
-          <div className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5">
+          <div className="space-y-3.5 rounded-2xl border border-slate-200 bg-white p-5">
             <h2 className="text-sm font-semibold text-slate-900">
-              Cakupan Kompetensi & Ketentuan Pengerjaan
+              10 Indikator Kisi-Kisi K3LH & Budaya Kerja Industri
             </h2>
-            <ul className="space-y-2.5 text-sm text-slate-600">
-              <li className="flex items-start gap-2.5">
+            <ul className="space-y-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
+              <li className="flex items-start gap-2">
                 <span className="mt-0.5 font-mono text-xs font-semibold text-sky-700">01.</span>
-                <span>Proses Bisnis di Bidang Teknik Jaringan Komputer dan Telekomunikasi</span>
+                <span>Konsep Dasar & Regulasi K3LH (UU No. 1 Tahun 1970 Pasal 2 ayat 1)</span>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-2">
                 <span className="mt-0.5 font-mono text-xs font-semibold text-sky-700">02.</span>
-                <span>Perkembangan Teknologi TJKT (5G, FTTH, IoT, Cloud, IPv6, SDN)</span>
+                <span>Aspek Kesehatan Kerja (Jasmani, Rohani, dan Sosial di Lingkungan IT)</span>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-2">
                 <span className="mt-0.5 font-mono text-xs font-semibold text-sky-700">03.</span>
-                <span>Profesi, Sertifikasi, Etika, dan Technopreneurship Bidang TJKT</span>
+                <span>Perbedaan Keselamatan vs. Kesehatan Kerja & Analisis Kerugian</span>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-2">
                 <span className="mt-0.5 font-mono text-xs font-semibold text-sky-700">04.</span>
-                <span>K3LH, Ergonomi, Penanganan Limbah E-Waste, dan Budaya Kerja 5R</span>
+                <span>Alat Pelindung Diri (APD) Spesifik TJKT (Permenaker No. 9/2016)</span>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-2">
                 <span className="mt-0.5 font-mono text-xs font-semibold text-sky-700">05.</span>
-                <span>Alat Ukur Fiber & LAN, OSI Layer, Pengkabelan UTP, dan Subnetting IP</span>
+                <span>Keselamatan Kerja di Ketinggian (9 Langkah WAH Tower Telekomunikasi)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 font-mono text-xs font-semibold text-sky-700">06.</span>
+                <span>Keselamatan Kelistrikan Ruang Server/Lab (Batas PDU ≤ 2200 W & Grounding)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 font-mono text-xs font-semibold text-sky-700">07.</span>
+                <span>Keselamatan Serat Optik (Limbah Kaca, Mata, & Splicing Loss &lt; 0,05 dB)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 font-mono text-xs font-semibold text-sky-700">08.</span>
+                <span>Manajemen Kabel (Jarak Aman Kabel Listrik AC & Data UTP ≥ 20 cm)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 font-mono text-xs font-semibold text-sky-700">09.</span>
+                <span>Pengelolaan Limbah Elektronik (E-Waste) & APAR Kelas C</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 font-mono text-xs font-semibold text-sky-700">10.</span>
+                <span>Ergonomi Kerja Teknisi IT & Pencegahan Penyakit Akibat Kerja</span>
               </li>
             </ul>
 
-            <div className="border-t border-slate-100 pt-3.5 text-xs leading-relaxed text-slate-500">
+            <div className="border-t border-slate-100 pt-3 text-xs leading-relaxed text-slate-500">
               Progres jawaban tersimpan otomatis di perangkat. Hindari berpindah tab atau
-              membuka aplikasi lain selama ujian berlangsung karena sistem mencatat pelanggaran
-              fokus secara otomatis.
+              membuka aplikasi lain selama ujian berlangsung.
             </div>
           </div>
         </section>

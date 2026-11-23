@@ -168,7 +168,7 @@ export default function App() {
         sekolah: student.sekolah,
         kelas: student.kelas,
         nama_lengkap: student.nama,
-        pilihan_lkpd: 'Bab 1 - Bab 5 (Dasar-Dasar TJKT)',
+        pilihan_lkpd: 'K3LH & Budaya Kerja Industri (Fase E / 2026-2027)',
         paket_soal: `Paket ${packetCode}`,
         durasi_detik: durasiDetik,
         skor_pg_benar: correctCount,
